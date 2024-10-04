@@ -29,16 +29,13 @@ The current codebase consists of a Python script that:
 
 This proof of concept lays the groundwork for a more comprehensive feedback analysis tool. Future plans include:
 
-1. Incorporating all feedback from EAGxBerkeley, including:
-   - Official survey responses
-   - Word-of-mouth feedback
-   - Social media mentions
-2. Developing a more sophisticated natural language processing pipeline
-3. Creating an interactive dashboard for visualizing feedback patterns
-4. Implementing automated report generation for posting on platforms like LessWrong
+1. Incorporating all feedback from EAGxBerkeley
+2. Developing a better pipeline (Dont know what that looks like yet)
+3. Creating something for visualizing feedback patterns
+4. Implementing report to posting on platforms like LessWrong for future Conferences
 5. Extending the methodology to analyze feedback from multiple conferences over time
 
-The goal is to create a useful tool for the EA community to analyze collective patterns and continuously improve event experiences.
+The goal is to create a useful tool for conference communities to analyze collective patterns and continuously improve the collective experience.
 
 ## Running the Analysis
 
