@@ -2,22 +2,34 @@
 
 ## Project Overview
 
-This project is a proof of concept for analyzing collective reality through conference feedback using natural language processing and machine learning techniques. The current implementation focuses on the EAGxBerkeley 2024 conference, but the methodology can be extended to other events in the future.
+This project is a poc for interpreting collective reality through conference feedback using openai's API. The current implementation focuses on the EAGxBerkeley 2024 conference, but the methodology can be extended to other conferences in the future.
 
 ### Key Goals
-1. Analyze participant feedback to identify patterns and insights of the collective
-2. Provide actionable recommendations for future conference improvements
-3. Demonstrate the patterns that arise from the collective.
+- Analyze participant feedback to identify patterns and insights of the collective 
+- Provide actionable recommendations for future conference improvements
 
 ## Current Implementation
 
 The current codebase consists of a Python script that:
 1. Loads conference feedback data from a CSV file
 2. Converts the data to JSON format
-3. Utilizes OpenAI's GPT-4 model to analyze the feedback
+3. Utilizes OpenAI's GPT-4o model to analyze the feedback
 4. Generates a summary report with key insights and recommendations
 
-### Key Findings (Proof of Concept)
+   ```bash
+   completion = client.chat.completions.create(
+    model="gpt-4",
+    messages=[
+        {"role": "system", "content": "You are an expert in human psychology and collective psychology..."},
+        {
+            "role": "user",
+            "content": f"Jump right in. No preamble.Create a concise and actionable post of the EAGxBerkeley 2024 conference feedback, attached here: {csv_data}. Which participants had the most accurate mental model of other attendees? Who had the most outlier experiences? Which session was ranked as the least favorite? What are the key patterns worth noting? What is the public perception of the missing stair problem? Answer all the above simply and actionably that would provide for good blog post seed content for the rationality community."
+        }
+    ]
+   )   
+   ```
+
+### Key Findings
 
 - Identified participants with the most accurate perception of the conference
 - Highlighted outlier experiences
@@ -35,7 +47,7 @@ This proof of concept lays the groundwork for a more comprehensive feedback anal
 4. Implementing report to posting on platforms like LessWrong for future Conferences
 5. Extending the methodology to analyze feedback from multiple conferences over time
 
-The goal is to create a useful tool for conference communities to analyze collective patterns and continuously improve the collective experience.
+The goal is to create a useful collective awareness tool for conference communities to interpret patterns behind objective feedback.
 
 ## Running the Analysis
 
@@ -54,50 +66,15 @@ The goal is to create a useful tool for conference communities to analyze collec
    ```bash
    pip install pandas openai
    ```
-
-### Running the Script
-```python
-import pandas as pd
-from openai import OpenAI
-
-# Load feedback data
-df = pd.read_csv('EAG_Berkeley_2024_Feedback.csv')
-
-# Convert CSV data to JSON
-csv_data = df.to_json(orient='records')
-
-# Initialize OpenAI client
-client = OpenAI()
-
-# Request GPT-4 model for analysis
-completion = client.chat.completions.create(
-    model="gpt-4",
-    messages=[
-        {"role": "system", "content": "You are an expert in human psychology and collective psychology..."},
-        {
-            "role": "user",
-            "content": f"Jump right in... {csv_data}"
-        }
-    ]
-)
-
-# Output the response
-print(completion.choices[0].message)
-```
-
+4. Run the model:
+   ```bash
+   python3 app.py
+   ```
 ### Expected Output
 The script generates a comprehensive analysis of the feedback, including:
 - Participants with the most accurate mental models
 - Outlier experiences
 - Least favorite sessions
 - Community perception of key issues (e.g., the "Missing Stair" problem)
-- Key patterns and trends
+- Key patterns and trends within the collective
 - Actionable recommendations for future improvements
-
-## Contributing
-
-We welcome contributions to improve this proof of concept and develop it into a fully-fledged feedback analysis tool.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
