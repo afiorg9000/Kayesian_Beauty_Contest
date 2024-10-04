@@ -2,12 +2,12 @@
 
 ## Project Overview
 
-This project is a proof of concept for analyzing conference feedback using natural language processing and machine learning techniques. The current implementation focuses on the EAGxBerkeley 2024 conference, but the methodology can be extended to other events in the future.
+This project is a proof of concept for analyzing collective reality through conference feedback using natural language processing and machine learning techniques. The current implementation focuses on the EAGxBerkeley 2024 conference, but the methodology can be extended to other events in the future.
 
 ### Key Goals
-1. Analyze participant feedback to identify patterns and insights
+1. Analyze participant feedback to identify patterns and insights of the collective
 2. Provide actionable recommendations for future conference improvements
-3. Demonstrate the potential of AI-assisted feedback analysis for community events
+3. Demonstrate the patterns that arise from the collective.
 
 ## Current Implementation
 
