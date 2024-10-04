@@ -1,62 +1,62 @@
 # EAGxBerkeley 2024 Conference Feedback Analysis
 
-## Key Takeaways and Insights
+## Project Overview
 
-### Most Accurate Mental Model
-- Participants with Entry IDs 3, 17, and 21 had the most accurate perception of other attendees.
-- Their consensus rating (9/10) aligned well with the overall conference ratings (Median: 6, Mean: 6.3).
+This project is a proof of concept for analyzing conference feedback using natural language processing and machine learning techniques. The current implementation focuses on the EAGxBerkeley 2024 conference, but the methodology can be extended to other events in the future.
 
-### Most Outlier Experience
-- The participant with Entry ID 7 had the most outlier experience.
-- Provided a consensus rating of 3/10, significantly lower than the overall ratings.
+### Key Goals
+1. Analyze participant feedback to identify patterns and insights
+2. Provide actionable recommendations for future conference improvements
+3. Demonstrate the potential of AI-assisted feedback analysis for community events
 
-### Least Favorite Sessions
-- Wild Animal Suffering and EA Fundraising were frequently mentioned as least favorite.
-- These sessions should be reviewed and possibly revamped to better meet attendee expectations.
+## Current Implementation
 
-### Public Perception of the Missing Stair Problem
-- Widely recognized by participants.
-- Many expressed frustration over the lack of accountability and action in addressing this problem.
-- Feedback points to a need for transparent measures and active efforts to tackle these internal issues.
+The current codebase consists of a Python script that:
+1. Loads conference feedback data from a CSV file
+2. Converts the data to JSON format
+3. Utilizes OpenAI's GPT-4 model to analyze the feedback
+4. Generates a summary report with key insights and recommendations
 
-## Key Patterns Worth Noting
+### Key Findings (Proof of Concept)
 
-1. Frustration with the 'Missing Stair' Issue
-   - Majority of participants are aware of problematic individuals not held accountable.
-   - Significant source of discontent requiring urgent attention.
+- Identified participants with the most accurate perception of the conference
+- Highlighted outlier experiences
+- Pinpointed least favorite sessions
+- Analyzed community perception of the "Missing Stair" problem
+- Provided actionable recommendations for future improvements
 
-2. Session Quality Concerns
-   - Specific sessions, particularly Wild Animal Suffering and EA Fundraising, not meeting expectations.
-   - Organizers should consider revising content or improving delivery.
+## Future Work
 
-## Actionable Recommendations
+This proof of concept lays the groundwork for a more comprehensive feedback analysis tool. Future plans include:
 
-1. Improve Session Quality
-   - Revamp content or presentation style of poorly-received sessions.
-   - Gather more detailed feedback for specific areas of improvement.
+1. Incorporating all feedback from EAGxBerkeley, including:
+   - Official survey responses
+   - Word-of-mouth feedback
+   - Social media mentions
+2. Developing a more sophisticated natural language processing pipeline
+3. Creating an interactive dashboard for visualizing feedback patterns
+4. Implementing automated report generation for posting on platforms like LessWrong
+5. Extending the methodology to analyze feedback from multiple conferences over time
 
-2. Address the 'Missing Stair' Problem
-   - Create clear policies for accountability and transparency.
-   - Proactively communicate steps being taken to resolve these issues.
+The goal is to create a useful tool for the EA community to analyze collective patterns and continuously improve event experiences.
 
-3. Enhance Community Accountability
-   - Handle internal issues visibly to the community.
-   - Foster a stronger, healthier community through transparency.
-
-## Running the Python Code for Analysis
+## Running the Analysis
 
 ### Prerequisites
-- Python Version: 3.x
-- Virtual Environment (Optional):
-  ```bash
-  python3 -m venv env
-  source env/bin/activate
-  ```
+- Python 3.x
+- Virtual Environment (recommended)
 
-### Required Libraries
-```bash
-pip install pandas openai
-```
+### Setup
+1. Clone the repository
+2. Create and activate a virtual environment (optional):
+   ```bash
+   python3 -m venv env
+   source env/bin/activate
+   ```
+3. Install required libraries:
+   ```bash
+   pip install pandas openai
+   ```
 
 ### Running the Script
 ```python
@@ -89,9 +89,18 @@ print(completion.choices[0].message)
 ```
 
 ### Expected Output
-The output will provide a concise and actionable analysis of the feedback, detailing:
+The script generates a comprehensive analysis of the feedback, including:
 - Participants with the most accurate mental models
-- Those who experienced the most outlier perspectives
+- Outlier experiences
 - Least favorite sessions
-- Community's overall perception of the "Missing Stair" issue
-- Key patterns and suggestions for future improvements
+- Community perception of key issues (e.g., the "Missing Stair" problem)
+- Key patterns and trends
+- Actionable recommendations for future improvements
+
+## Contributing
+
+We welcome contributions to improve this proof of concept and develop it into a fully-fledged feedback analysis tool.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
