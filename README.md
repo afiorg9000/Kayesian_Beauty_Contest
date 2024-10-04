@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is a poc for interpreting collective reality through conference feedback using openai's API. The current implementation focuses on the EAGxBerkeley 2024 conference, but the methodology can be extended to other conferences in the future.
+This project is a poc for interpreting the collective patterns of a community from conference participant feedback using openai's API. The current implementation focuses on the EAGxBerkeley 2024 conference, but the methodology can be extended to other conferences in the future.
 
 ### Key Goals
 - Analyze participant feedback to identify patterns and insights of the collective 
